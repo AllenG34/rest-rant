@@ -11,11 +11,12 @@ function index (data) {
             </p>
             <img src={place.pic} alt={place.name} />
             <p className="text-center">
-              Located in {Vegas}, {Nevada}
+              Located in {place.city}, {place.state}
             </p>
           </div>
         )
-    })  
+      })
+      
     return (
       <Def>
           <main>
