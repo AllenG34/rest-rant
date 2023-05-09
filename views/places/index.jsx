@@ -19,9 +19,7 @@ function index (data) {
         </p>
       </div>
     )
-  })
-  
-      
+  })  
     return (
       <Def>
           <main>
@@ -33,6 +31,5 @@ function index (data) {
       </Def>
     )
   }
-  
  
 module.exports = index

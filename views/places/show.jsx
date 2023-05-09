@@ -42,7 +42,34 @@ const Def = require("../default");
               <form method="POST" action={`/places/${data.id}?_method=DELETE`}>
                 <button type="submit" className="btn btn-danger">
                   Delete
-                </button>
+                </button> 
+                </form>            
+              <form action={`/places/${data.place.id}/comment`} method="POST">
+              <div className="row">
+                <div className="form-group col-sm-12">
+                    <label htmlFor='author'>Author</label>
+                    <input id='author' name='author' className="form-control"/>
+                  </div>
+                </div>
+                <div className="row">
+                <div className="form-group col-sm-12">
+                    <label htmlFor='content'>Content</label>
+                    <textarea id='content' name='content' className="form-control"></textarea>
+                  </div>
+                </div>
+                <div>
+                <div className="form-group col-sm-12">
+                    <label htmlFor='stars'>Star Rating</label>
+                    <input type='range' step='0.5' min='1' max='5'  id='stars' name='stars' className="form-control" />
+                  </div>
+                </div>
+                <div>
+                <div className="form-group col-sm-2">
+                      <label htmlFor='rant'>Rant</label>
+                      <input type='checkbox' id='rant' name='rant' className="form-control" />
+                    </div>
+                </div>
+                <input type="submit" className="btn btn-primary" value="Add Comment" />
               </form>
             </div>
           </div>
@@ -51,27 +78,6 @@ const Def = require("../default");
     );
   }
 
-function new_form (data) {
-  let message = ''                 
-    if (data.message) {
-      message = (
-        <h4 className="alert-danger">
-          {data.message}
-        </h4>
-      )
-    }
-    return (
-        <Def>
-          <main>
-            <h1>Add a New Place</h1>
-            {message}                 
-            ...
-          </main>
-        </Def>
-    )
-}
-
-module.exports = new_form
 module.exports = show;
 
    
