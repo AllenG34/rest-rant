@@ -35,6 +35,7 @@ const Def = require("../default");
               <stong>- {c.author}</stong>
             </h3>
             <h4>Rating: {c.stars}</h4>
+
           </div>
         )
       })
@@ -123,3 +124,6 @@ module.exports = show
  // if (data.place.comments.length) {
  //   comments = data.place.comments.map(c => {
 
+//  <form method="POST" action={`/places/${data.place.id}/comment/${c.id}?_method=DELETE`}>
+////<input type="submit" className="btn btn-danger" value="Delete Comment" />
+//</form>
